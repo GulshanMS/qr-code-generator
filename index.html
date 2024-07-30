@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="public/css/styles.css">
+</head>
+<body>
+<div class="container">
+    <h1 class="text-center my-5 animate__animated animate__fadeInDown">QR Code Generator</h1>
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-sm animate__animated animate__fadeInUp">
+                <div class="card-body">
+                    <form id="qr-form">
+                        <div class="form-group">
+                            <label for="url-input">Enter URL:</label>
+                            <input type="url" class="form-control" id="url-input" placeholder="https://example.com" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Generate QR Code</button>
+                    </form>
+                    <div class="text-center mt-4" id="qr-result"></div>
+                    <a id="download-link" class="btn btn-success btn-block mt-3" style="display:none;">Download QR Code</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="floating">
+    <div class="shape shape1"></div>
+    <div class="shape shape2"></div>
+    <div class="shape shape3 rect"></div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
+<script src="public/js/script.js"></script>
+</body>
+</html>
